@@ -1,0 +1,28 @@
+\ProvidesPackage{tikz} % TODO
+% ====================================================================
+
+\PassOptionsToPackage{table,xcdraw}{xcolor}
+
+
+% \RequirePackage{pgfplots}
+% \usepgfplotslibrary{colorbrewer}
+% \pgfplotsset{compat=1.18}
+
+
+\RequirePackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{decorations.pathreplacing,calligraphy}
+\usetikzlibrary{shapes.geometric}
+
+
+\RequirePackage[export]{adjustbox}
+
+
+\RequirePackage{subfig}
+
+
+\newcommand{\incfig}[2]{%
+    \def\svgwidth{#1}
+    \import{./inc/figures/}{#2}
+}

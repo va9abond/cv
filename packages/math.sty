@@ -1,0 +1,190 @@
+\ProvidesPackage{math}
+% ====================================================================
+
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage{amsfonts}
+\RequirePackage{amsthm}
+\RequirePackage{mathtools}
+\RequirePackage{xfrac}
+
+
+\RequirePackage{cleveref}   % ??
+
+
+% show the eq-tion number if only there is any ref on it
+\mathtoolsset{showonlyrefs=false}
+
+
+% \RequirePackage{leqno} % show ref on the eq-tion on the left side
+
+
+% \RequirePackage{bigints}
+
+
+% \RequirePackage{numprint}
+% \npthousandsep{\ensuremath\,\allowbreak} % package: numprint
+
+
+
+% segment [a,b], interval (a,b)
+\newcommand\abseg{\ensuremath{[a,b]}}
+\newcommand\abint{\ensuremath{(a,b)}}
+
+% sgn
+\DeclareMathOperator{\sgn}{sgn}
+
+% GL, SL
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\SL}{SL}
+
+% argmax, argmin
+\DeclareMathOperator*{\argmax}{argmax}
+\DeclareMathOperator*{\argmin}{argmin}
+
+% deliminator
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+\DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
+\DeclarePairedDelimiter{\round}{\lfloor}{\rceil}
+
+
+
+% ====================================================================
+% Number Sets
+% ====================================================================
+\newcommand{\RR}{\ensuremath{\mathbb{R}}}
+\newcommand{\NN}{\ensuremath{\mathbb{N}}}
+\newcommand{\ZZ}{\ensuremath{\mathbb{Z}}}
+\newcommand{\QQ}{\ensuremath{\mathbb{Q}}}
+\newcommand{\CC}{\ensuremath{\mathbb{C}}}
+\newcommand{\PP}{\ensuremath{\mathbb{P}}}
+\newcommand{\HH}{\ensuremath{\mathbb{H}}}
+\newcommand{\FF}{\ensuremath{\mathbb{F}}}
+\newcommand{\EE}{\ensuremath{\mathbb{E}}}
+
+
+% ====================================================================
+% Math Black Board (bb):
+% ====================================================================
+% Uppercase
+\newcommand{\bbA}{\mathbb{A}}	\newcommand{\bbB}{\mathbb{B}}
+\newcommand{\bbC}{\mathbb{C}}	\newcommand{\bbD}{\mathbb{D}}
+\newcommand{\bbE}{\mathbb{E}}	\newcommand{\bbF}{\mathbb{F}}
+\newcommand{\bbG}{\mathbb{G}}	\newcommand{\bbH}{\mathbb{H}}
+\newcommand{\bbI}{\mathbb{I}}	\newcommand{\bbJ}{\mathbb{J}}
+\newcommand{\bbK}{\mathbb{K}}	\newcommand{\bbL}{\mathbb{L}}
+\newcommand{\bbM}{\mathbb{M}}	\newcommand{\bbN}{\mathbb{N}}
+\newcommand{\bbO}{\mathbb{O}}	\newcommand{\bbP}{\mathbb{P}}
+\newcommand{\bbQ}{\mathbb{Q}}	\newcommand{\bbR}{\mathbb{R}}
+\newcommand{\bbS}{\mathbb{S}}	\newcommand{\bbT}{\mathbb{T}}
+\newcommand{\bbU}{\mathbb{U}}	\newcommand{\bbV}{\mathbb{V}}
+\newcommand{\bbW}{\mathbb{W}}	\newcommand{\bbX}{\mathbb{X}}
+\newcommand{\bbY}{\mathbb{Y}}	\newcommand{\bbZ}{\mathbb{Z}}
+
+
+% ====================================================================
+% Math Cal (cal):
+% ====================================================================
+% Uppercase
+\newcommand{\calA}{\mathcal{A}}	\newcommand{\calB}{\mathcal{B}}
+\newcommand{\calC}{\mathcal{C}}	\newcommand{\calD}{\mathcal{D}}
+\newcommand{\calE}{\mathcal{E}}	\newcommand{\calF}{\mathcal{F}}
+\newcommand{\calG}{\mathcal{G}}	\newcommand{\calH}{\mathcal{H}}
+\newcommand{\calI}{\mathcal{I}}	\newcommand{\calJ}{\mathcal{J}}
+\newcommand{\calK}{\mathcal{K}}	\newcommand{\calL}{\mathcal{L}}
+\newcommand{\calM}{\mathcal{M}}	\newcommand{\calN}{\mathcal{N}}
+\newcommand{\calO}{\mathcal{O}}	\newcommand{\calP}{\mathcal{P}}
+\newcommand{\calQ}{\mathcal{Q}}	\newcommand{\calR}{\mathcal{R}}
+\newcommand{\calS}{\mathcal{S}}	\newcommand{\calT}{\mathcal{T}}
+\newcommand{\calU}{\mathcal{U}}	\newcommand{\calV}{\mathcal{V}}
+\newcommand{\calW}{\mathcal{W}}	\newcommand{\calX}{\mathcal{X}}
+\newcommand{\calY}{\mathcal{Y}}	\newcommand{\calZ}{\mathcal{Z}}
+
+
+% ====================================================================
+% Math Bold (bld) Font:
+% ====================================================================
+% Uppercase
+\newcommand{\bldA}{\boldsymbol{A}}	\newcommand{\bldB}{\boldsymbol{B}}
+\newcommand{\bldC}{\boldsymbol{C}}	\newcommand{\bldD}{\boldsymbol{D}}
+\newcommand{\bldE}{\boldsymbol{E}}	\newcommand{\bldF}{\boldsymbol{F}}
+\newcommand{\bldG}{\boldsymbol{G}}	\newcommand{\bldH}{\boldsymbol{H}}
+\newcommand{\bldI}{\boldsymbol{I}}	\newcommand{\bldJ}{\boldsymbol{J}}
+\newcommand{\bldK}{\boldsymbol{K}}	\newcommand{\bldL}{\boldsymbol{L}}
+\newcommand{\bldM}{\boldsymbol{M}}	\newcommand{\bldN}{\boldsymbol{N}}
+\newcommand{\bldO}{\boldsymbol{O}}	\newcommand{\bldP}{\boldsymbol{P}}
+\newcommand{\bldQ}{\boldsymbol{Q}}	\newcommand{\bldR}{\boldsymbol{R}}
+\newcommand{\bldS}{\boldsymbol{S}}	\newcommand{\bldT}{\boldsymbol{T}}
+\newcommand{\bldU}{\boldsymbol{U}}	\newcommand{\bldV}{\boldsymbol{V}}
+\newcommand{\bldW}{\boldsymbol{W}}	\newcommand{\bldX}{\boldsymbol{X}}
+\newcommand{\bldY}{\boldsymbol{Y}}	\newcommand{\bldZ}{\boldsymbol{Z}}
+
+% Lowercase
+\newcommand{\blda}{\boldsymbol{a}}	\newcommand{\bldb}{\boldsymbol{b}}
+\newcommand{\bldc}{\boldsymbol{c}}	\newcommand{\bldd}{\boldsymbol{d}}
+\newcommand{\blde}{\boldsymbol{e}}	\newcommand{\bldf}{\boldsymbol{f}}
+\newcommand{\bldg}{\boldsymbol{g}}	\newcommand{\bldh}{\boldsymbol{h}}
+\newcommand{\bldi}{\boldsymbol{i}}	\newcommand{\bldj}{\boldsymbol{j}}
+\newcommand{\bldk}{\boldsymbol{k}}	\newcommand{\bldl}{\boldsymbol{l}}
+\newcommand{\bldm}{\boldsymbol{m}}	\newcommand{\bldn}{\boldsymbol{n}}
+\newcommand{\bldo}{\boldsymbol{o}}	\newcommand{\bldp}{\boldsymbol{p}}
+\newcommand{\bldq}{\boldsymbol{q}}	\newcommand{\bldr}{\boldsymbol{r}}
+\newcommand{\blds}{\boldsymbol{s}}	\newcommand{\bldt}{\boldsymbol{t}}
+\newcommand{\bldu}{\boldsymbol{u}}	\newcommand{\bldv}{\boldsymbol{v}}
+\newcommand{\bldw}{\boldsymbol{w}}	\newcommand{\bldx}{\boldsymbol{x}}
+\newcommand{\bldy}{\boldsymbol{y}}	\newcommand{\bldz}{\boldsymbol{z}}
+
+
+% ====================================================================
+% Math Script (src) Font:
+% ====================================================================
+% Uppercase
+\newcommand{\srcA}{{\mathscr{A}}}   \newcommand{\srcB}{{\mathscr{B}}}
+\newcommand{\srcC}{{\mathscr{C}}}   \newcommand{\srcD}{{\mathscr{D}}}
+\newcommand{\srcE}{{\mathscr{E}}}   \newcommand{\srcF}{{\mathscr{F}}}
+\newcommand{\srcG}{{\mathscr{G}}}   \newcommand{\srcH}{{\mathscr{H}}}
+\newcommand{\srcI}{{\mathscr{I}}}   \newcommand{\srcJ}{{\mathscr{J}}}
+\newcommand{\srcK}{{\mathscr{K}}}   \newcommand{\srcL}{{\mathscr{L}}}
+\newcommand{\srcM}{{\mathscr{M}}}   \newcommand{\srcN}{{\mathscr{N}}}
+\newcommand{\srcO}{{\mathscr{O}}}   \newcommand{\srcP}{{\mathscr{P}}}
+\newcommand{\srcQ}{{\mathscr{Q}}}   \newcommand{\srcR}{{\mathscr{R}}}
+\newcommand{\srcS}{{\mathscr{S}}}   \newcommand{\srcT}{{\mathscr{T}}}
+\newcommand{\srcU}{{\mathscr{U}}}   \newcommand{\srcV}{{\mathscr{V}}}
+\newcommand{\srcW}{{\mathscr{W}}}   \newcommand{\srcX}{{\mathscr{X}}}
+\newcommand{\srcY}{{\mathscr{Y}}}   \newcommand{\srcZ}{{\mathscr{Z}}}
+
+
+% ====================================================================
+% Math Fraktur (frak) Font:
+% ====================================================================
+% Uppercase
+\newcommand{\frakA}{\mathfrak{A}}	\newcommand{\frakB}{\mathfrak{B}}
+\newcommand{\frakC}{\mathfrak{C}}	\newcommand{\frakD}{\mathfrak{D}}
+\newcommand{\frakE}{\mathfrak{E}}	\newcommand{\frakF}{\mathfrak{F}}
+\newcommand{\frakG}{\mathfrak{G}}	\newcommand{\frakH}{\mathfrak{H}}
+\newcommand{\frakI}{\mathfrak{I}}	\newcommand{\frakJ}{\mathfrak{J}}
+\newcommand{\frakK}{\mathfrak{K}}	\newcommand{\frakL}{\mathfrak{L}}
+\newcommand{\frakM}{\mathfrak{M}}	\newcommand{\frakN}{\mathfrak{N}}
+\newcommand{\frakO}{\mathfrak{O}}	\newcommand{\frakP}{\mathfrak{P}}
+\newcommand{\frakQ}{\mathfrak{Q}}	\newcommand{\frakR}{\mathfrak{R}}
+\newcommand{\frakS}{\mathfrak{S}}	\newcommand{\frakT}{\mathfrak{T}}
+\newcommand{\frakU}{\mathfrak{U}}	\newcommand{\frakV}{\mathfrak{V}}
+\newcommand{\frakW}{\mathfrak{W}}	\newcommand{\frakX}{\mathfrak{X}}
+\newcommand{\frakY}{\mathfrak{Y}}	\newcommand{\frakZ}{\mathfrak{Z}}
+
+% Lowercase
+\newcommand{\fraka}{\mathfrak{a}}	\newcommand{\frakb}{\mathfrak{b}}
+\newcommand{\frakc}{\mathfrak{c}}	\newcommand{\frakd}{\mathfrak{d}}
+\newcommand{\frake}{\mathfrak{e}}	\newcommand{\frakf}{\mathfrak{f}}
+\newcommand{\frakg}{\mathfrak{g}}	\newcommand{\frakh}{\mathfrak{h}}
+\newcommand{\fraki}{\mathfrak{i}}	\newcommand{\frakj}{\mathfrak{j}}
+\newcommand{\frakk}{\mathfrak{k}}	\newcommand{\frakl}{\mathfrak{l}}
+\newcommand{\frakm}{\mathfrak{m}}	\newcommand{\frakn}{\mathfrak{n}}
+\newcommand{\frako}{\mathfrak{o}}	\newcommand{\frakp}{\mathfrak{p}}
+\newcommand{\frakq}{\mathfrak{q}}	\newcommand{\frakr}{\mathfrak{r}}
+\newcommand{\fraks}{\mathfrak{s}}	\newcommand{\frakt}{\mathfrak{t}}
+\newcommand{\fraku}{\mathfrak{u}}	\newcommand{\frakv}{\mathfrak{v}}
+\newcommand{\frakw}{\mathfrak{w}}	\newcommand{\frakx}{\mathfrak{x}}
+\newcommand{\fraky}{\mathfrak{y}}	\newcommand{\frakz}{\mathfrak{z}}

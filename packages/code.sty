@@ -1,0 +1,45 @@
+\ProvidesPackage{code}
+% ====================================================================
+
+\RequirePackage{fancyvrb} % add Verbatim and Verb
+\RequirePackage{cprotect} % allow verbatim in macro arguments
+
+
+\newcommand{\inlcode}[1]{%
+    {\bfseries\color{Blue}\Verb{#1}}% or \texttt instead \Verb
+}
+
+\newcommand{\inl}[1]{\begingroup%
+    \sffamily\bfseries\color{Blue}#1%
+\endgroup}
+
+
+\DefineVerbatimEnvironment{snip}{Verbatim}{%
+    formatcom=\bfseries\color{Sepia},
+    % commandchars=\\{\},
+    % gobble=2,
+    % numbers=left,
+    % numbersep=2mm,
+    % frame=lines,
+    % framerule=0.0mm,
+}
+
+
+\RequirePackage{minted}
+\setminted{
+    linenos=true,
+    autogobble,
+% * frame=lines: draws two lines, one on top and one at the bottom of
+%   the code to frame it. | leftline | topline | bottomline | single.
+% * framesep=2mm: the frame separation is set to 2mm. Other length
+%   units can be used.
+% * baselinestretch=1.2: the line spacing of the code set to 1.2.
+% * bgcolor=LightGray: background colour set to LightGray. You need to
+%   import the xcolor package for this to work.
+% * fontsize=\footnotesize: font size set to footnotesize. Any other
+%   font size can be set.
+% * linenos: enables line numbers.
+% * mathescape: enables math mode in code comments.
+% * rulecolor: changes the colour of the frame.
+% * showspaces: enables a special character to make spaces visible.
+}

@@ -1,0 +1,77 @@
+\ProvidesPackage{mybase}
+% ====================================================================
+
+\RequirePackage{cmap}                   % make PDFs searchable and copy-able
+\RequirePackage[T1,T2A]{fontenc}        % (redundant) latex core upload T1
+                                        % encoding for ASCII symbols by default
+\RequirePackage[utf8]{inputenc}         % source code encoding
+\RequirePackage[english,russian]{babel} % upload T2A encoding for Russian text
+
+
+\RequirePackage[a4paper,
+    % text={180mm, 260mm},
+    top=10mm, bottom=15mm,
+    left=15mm, right=15mm,
+    nomarginpar, % or | marginparwidth=4cm | marginparsep=0.5cm
+    headsep=0cm, headheight=0cm,
+    footskip=1cm,
+    % showframe
+]{geometry}
+
+
+\RequirePackage{fancyhdr}           % custom headers and footers
+\pagestyle{fancy}                   % ?? name of headers and footers style
+\fancyhead[L]{}                     % clear left part of page header
+\fancyhead[C]{}                     % clear center part of page header
+\fancyhead[R]{}                     % clear right part of page header
+\fancyfoot{}                        % clear all footer fields
+\renewcommand*{\headrulewidth}{0pt} % remove ruler separated page header and
+                                    % main page
+
+
+\RequirePackage{enumitem}
+% \setlist[enumerate,<levels>]{<format>}
+% \setlist[itemize,<levels>]{<format>}
+% \setlist[description,<levels>]{<format>}
+% \setlist[<levels>]{<format>}
+
+% \setlist{%
+%     nosep, % remove all vertical spaces (\topsep+\parskip+\partopsep)
+%     % left=*cm, % start a label with *cm left offset from the margin
+%     % right=*cm
+%     label=(\arabic*), ref=\arabic*, % \alph  \Alph  \arabic \roman \Roman \fnsymbol
+%     format=\normalfont, % label format
+% }
+
+
+\RequirePackage{graphicx} % for figures
+\graphicspath{ {./inc/figures/} } % folders where latex search figures
+
+
+\RequirePackage{multicol}
+\RequirePackage{array}
+
+
+\RequirePackage[dvipsnames]{xcolor}
+
+
+\RequirePackage{hyperref}   % or use more general package: bookmark
+\RequirePackage{theoremref} % ??
+\urlstyle{same} % ??
+
+
+% \RequirePackage{setspace} % linespread
+% \onehalfspacing
+% \doublespacing
+% \singlespacing
+
+
+\RequirePackage{import}      % ??
+\RequirePackage{xifthen}     % ??
+\RequirePackage{pdfpages}    % ??
+\RequirePackage{transparent} % ??
+
+
+\RequirePackage{lipsum}
+\RequirePackage{etoolbox}
+\RequirePackage{tcolorbox}

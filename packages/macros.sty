@@ -1,0 +1,24 @@
+\ProvidesPackage{macros}
+% ====================================================================
+
+\newcommand{\myref}[1]{\hyperref[#1]{#1}}
+
+
+\NewTotalTCBox{\myverb}{ O{gray} v !O{} }{
+    verbatim, notitle,
+    boxsep=0mm, top=1pt, bottom=1pt, left=1mm, right=1mm,
+    toprule=0pt, bottomrule=0pt, leftrule=0pt, rightrule=0pt, % or boxrule=1pt
+    arc=1pt, outer arc=1pt,
+    colback=#1!15!white, colframe=#1!25!white,
+    #3,
+}{\color{Blue}\Verb{#2}}
+
+
+\newtcolorbox[auto counter]{bybox}[1]{
+    toptitle=0mm, bottomtitle=0mm, lefttitle=0mm, righttitle=0mm,
+    top=0mm, bottom=0mm, left=0mm, right=0mm,
+    boxsep=2mm, boxrule=1pt, arc=4pt, outer arc=4pt,
+    colbacktitle=NavyBlue!30!white, colframe=NavyBlue!30!white, colback=Yellow!10!white,
+    coltitle=black, fonttitle=\bfseries, title={#1},
+    after title*={\hfill Example~\thetcbcounter},
+}
