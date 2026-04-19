@@ -17,8 +17,8 @@
     allcolors=blue,  % or use | linkcolor | filecolor | urlcolor | ...
 }
 
+\usepackage{wrapfig}
 \usepackage{changepage}
-
 
 \newcounter{questioncounter}
 
@@ -49,13 +49,20 @@
 % ======================================================
 \begin{document}
 
-{\bfseries
-    \LARGE{Сиразетдинов Рустем Дамирович}%
-}\vspace{5pt}\\
-{РТУ МИРЭА, Прикладная математика и информатика, 2 курс}\\
-{\url{https://github.com/va9abond}}\\
-{avesirazetdinov@gmail.com}\\
-{+7\ 917\ 774\ 59\ 97}\\
+\noindent
+\begin{minipage}[h]{0.6\textwidth}
+    {\bfseries\LARGE Сиразетдинов Рустем Дамирович}\\[5pt]
+    РТУ МИРЭА, Прикладная математика и информатика, 2 курс\\
+    \url{https://github.com/va9abond}\\
+    avesirazetdinov@gmail.com\\
+    +7\,(917)\,774--59--97
+\end{minipage}
+\hfill
+\begin{minipage}[h]{0.3\textwidth}
+    \hfill\includegraphics[width=3.5cm,height=4.5cm]{face}
+\end{minipage}
+
+
 
 \begin{xquestion}
     Расскажите, пожалуйста, где и на каком направлении вы учитесь?
